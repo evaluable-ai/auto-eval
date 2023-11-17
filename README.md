@@ -1,6 +1,6 @@
 # Evaluable AI
 
-Welcome to Evaluable AI's open-source repository, featuring our flagship tool, AutoEval. AutoEval revolutionizes the way models are evaluated in production environments. It excels at thorough assessments, offering capabilities to compare outputs across different models or delve into the nuances of various responses within a single model. Its hallmark is a customizable scoring system, empowering users to define their evaluation criteria via a user-defined rubric.
+Evaluable AI's open-source repository, AutoEval is tool for evaluating models in production. AutoEval is adept at conducting comprehensive assessments, whether it's comparing outputs from different models or analyzing the responses to various input prompts within the same model. A key functionality of AutoEval is its customizable scoring system, which allows users to establish their own criteria for evaluation through a user-defined rubric.
 
 **Key Features:**
 

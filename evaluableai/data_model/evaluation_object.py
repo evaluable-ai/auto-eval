@@ -1,7 +1,7 @@
 import json
 
 class EvaluationObject:
-    def __init__(self,input_row,model_response_objects):
+    def __init__(self,model_response_objects):
         self.candidate_model_response_objects = model_response_objects
         self.scores=None
         self.evaluating_model_name=None

@@ -1,8 +1,6 @@
 import requests
 import uuid,os
 import json,time
-from evaluableai.data_model.evaluation_object import EvaluationObject
-from evaluableai.data_model.model_response_object import ModelResponseObject
 from evaluableai.data_model.score_object import ScoreObject
 from evaluableai.models.model import Model
 from datetime import datetime
@@ -62,6 +60,9 @@ class Openai(Model):
                     "content": self.create_prompt(input_text,context,response)
                 }
             ],
+            'response_format': {
+                "type": "json_object"
+            },
             'temperature': 0,  # Adjust as needed for creativity vs. precision
             # 'max_tokens': 4000,  # Adjust as needed based on expected length of evaluation
         }
@@ -72,8 +73,8 @@ class Openai(Model):
         for evaluation_object in evaluation_objects:
             scores_list=[]
             for candidate_model_response in evaluation_object.candidate_model_response_objects:
-                input_text = candidate_model_response.get_input_text
-                context = candidate_model_response.get_input_context
+                input_text = candidate_model_response.get_input_text()
+                context = candidate_model_response.get_input_context()
                 response = candidate_model_response.response_text
                 body = self.get_body(input_text,context,response)
                 time.sleep(1)

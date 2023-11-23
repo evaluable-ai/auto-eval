@@ -66,7 +66,7 @@ class EvaluableAI:
                 all_responses_for_input.append(response)
 
             # Create an EvaluationObject for this input ID with all gathered responses
-            evaluation_object = EvaluationObject(input_key,all_responses_for_input)
+            evaluation_object = EvaluationObject(all_responses_for_input)
             evaluation_objects.append(evaluation_object)
         return evaluation_objects
 

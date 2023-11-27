@@ -51,7 +51,7 @@ pip install evaluableai
 Here's how to perform a basic evaluation:
 
 ```python
-from evaluableai.evaluableai import EvaluableAI
+from evaluableai import EvaluableAI
 
 data = [{
     'input': 'Who is the founder of Google?',
@@ -68,9 +68,7 @@ evaluator.run_with_user_data(data)
 To use a custom OpenAI model for response evaluation:
 
 ```python
-from evaluableai.evaluableai import EvaluableAI
-from evaluableai.models.evaluation_models.evaluating_model_name import EvaluatingModelName
-from evaluableai.models.evaluation_models.evaluating_model import EvaluatingModel
+from evaluableai import EvaluableAI , EvaluatingModelName, EvaluatingModel
 
 # Your data setup...
 
@@ -90,11 +88,7 @@ evaluator.run_with_user_data(data)
 To generate outputs on the fly using different candidate models:
 
 ```python
-from evaluableai.evaluableai import EvaluableAI
-from evaluableai.models.evaluation_models.evaluating_model_name import EvaluatingModelName
-from evaluableai.models.evaluation_models.evaluating_model import EvaluatingModel
-from evaluableai.models.candidate_models.candidate_model_names import CandidateModelName 
-from evaluableai.models.candidate_models.candidate_model import CandidateModel
+from evaluableai import EvaluableAI , EvaluatingModelName, EvaluatingModel , CandidateModelName, CandidateModel
 
 data = [{
     'input': 'Who is the founder of Google?',

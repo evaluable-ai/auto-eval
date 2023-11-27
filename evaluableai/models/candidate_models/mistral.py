@@ -1,9 +1,10 @@
-import requests
-from evaluableai.data_model.model_response_object import ModelResponseObject
+import os
 import uuid
-import json
+
+import requests
 from requests.exceptions import RequestException
-import time,os
+
+from evaluableai.data_model.model_response_object import ModelResponseObject
 
 
 class Mistral():
@@ -83,4 +84,3 @@ class Mistral():
 
         self._response_list = response_list
         return response_list  # This should return the populated list
-    

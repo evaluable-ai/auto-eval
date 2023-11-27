@@ -1,7 +1,7 @@
-
 import logging
-import os
+
 import requests
+
 from evaluableai.models.model import Model
 
 # Set up basic logging

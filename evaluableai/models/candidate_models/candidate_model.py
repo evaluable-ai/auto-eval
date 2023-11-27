@@ -3,8 +3,8 @@ import os
 
 from evaluableai.models.candidate_models.candidate_model_names import CandidateModelName
 from evaluableai.models.candidate_models.hugging_face import HuggingFace
-from evaluableai.models.candidate_models.open_ai import OpenAI
-from evaluableai.models.candidate_models.open_ai import OpenAiChat
+from evaluableai.models.candidate_models.open_ai import OpenAICandidate
+from evaluableai.models.candidate_models.open_ai import OpenAiChatCandidate
 from evaluableai.models.candidate_models.rest_candidate_model import CustomModelClass
 from evaluableai.models.model import Model
 
@@ -40,9 +40,9 @@ class CandidateModel(Model):
             if model_name == CandidateModelName.HUGGING_FACE:
                 return HuggingFace(model_version, api_key)
             elif model_name == CandidateModelName.OPEN_AI:
-                return OpenAI(model_version,api_key)
+                return OpenAICandidate(model_version, api_key)
             elif model_name == CandidateModelName.OPEN_AI_CHAT:
-                return OpenAiChat(model_version,api_key)
+                return OpenAiChatCandidate(model_version, api_key)
             else:
                 raise ValueError(f"Invalid model name: {model_name}")
         except (ValueError, EnvironmentError) as e:

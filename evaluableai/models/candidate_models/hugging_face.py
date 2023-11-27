@@ -1,12 +1,14 @@
 import logging
-import os
-import requests
 import uuid
+
+import requests
 from requests.exceptions import RequestException
+
 from evaluableai.data_model.model_response_object import ModelResponseObject
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 class HuggingFace:
     BASE_API_URL = "https://api-inference.huggingface.co/models/"
@@ -47,7 +49,7 @@ class HuggingFace:
         return response.json()
 
     def generate_response(self, input_frame):
-        self._response_list=[]
+        self._response_list = []
         for input_row in input_frame:
             query = {
                 "inputs": f"answer: {input_row.input_text} using the given context: {input_row.context}"

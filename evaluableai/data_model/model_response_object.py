@@ -1,8 +1,5 @@
-import json
-import uuid
-
 class ModelResponseObject:
-    def __init__(self, response_id, response_text,input_row,model):
+    def __init__(self, response_id, response_text, input_row, model):
         self._response_id = response_id
         self._response_text = response_text
         self._input_row = input_row
@@ -32,7 +29,7 @@ class ModelResponseObject:
                 f"response_text={repr(self._response_text)}, "
                 f"input_object={repr(self._input_row)}, "
                 f"model={repr(self._model)})")
-    
+
     def __str__(self):
         return self.to_dict()
 

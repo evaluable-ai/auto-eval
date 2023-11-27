@@ -1,14 +1,13 @@
-from abc import ABC, abstractmethod
-
-from evaluableai.models.model import Model
 from evaluableai.models.evaluation_models.evaluating_model_name import EvaluatingModelName
 from evaluableai.models.evaluation_models.openai import Openai
+from evaluableai.models.model import Model
+
 
 class EvaluatingModel(Model):
     def __init__(self, model_name, model_version, api_key_env):
         # Initialize instance variables
         if model_name == EvaluatingModelName.OPENAI:
-            self.instance= Openai(model_version,api_key_env)
+            self.instance = Openai(model_version, api_key_env)
         else:
             raise ValueError("Invalid models name")
 

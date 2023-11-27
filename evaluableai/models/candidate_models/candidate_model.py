@@ -40,9 +40,9 @@ class CandidateModel(Model):
             if model_name == CandidateModelName.HUGGING_FACE:
                 return HuggingFace(model_version, api_key)
             elif model_name == CandidateModelName.OPEN_AI:
-                return OpenAICandidate(model_version,api_key)
+                return OpenAICandidate(model_version, api_key)
             elif model_name == CandidateModelName.OPEN_AI_CHAT:
-                return OpenAiChatCandidate(model_version,api_key)
+                return OpenAiChatCandidate(model_version, api_key)
             else:
                 raise ValueError(f"Invalid model name: {model_name}")
         except (ValueError, EnvironmentError) as e:

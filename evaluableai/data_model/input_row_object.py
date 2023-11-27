@@ -1,13 +1,13 @@
 import uuid
+
 import pandas as pd
-import json
+
 
 class InputRow:
     def __init__(self, input_text, context, input_id=None):
         self._input_id = input_id if input_id is not None else uuid.uuid4()
         self._input_text = input_text
         self._context = context
-    
 
     def __repr__(self):
         return (f"InputObject(input_text={repr(self._input_text)}, "
@@ -53,7 +53,6 @@ class InputRow:
         return input_objects
 
     def __str__(self):
-        
         # Convert the dictionary to a JSON string
         return self.to_dict()
 
@@ -64,4 +63,3 @@ class InputRow:
             'input_text': self._input_text,
             'context': self._context
         }
-

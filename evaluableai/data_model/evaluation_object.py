@@ -1,21 +1,16 @@
-import json
-
 class EvaluationObject:
-    def __init__(self,model_response_objects):
+    def __init__(self, model_response_objects):
         self.candidate_model_response_objects = model_response_objects
-        self.scores=None
-        self.evaluating_model_name=None
-        self.evaluating_model_version=None
-
+        self.scores = None
+        self.evaluating_model_name = None
+        self.evaluating_model_version = None
 
     def _get_input_text(self):
         return self.model_response_object._input_row.input_text
 
-
     def __str__(self):
         # Convert the dictionary to a JSON string
         return self.to_dict()
-
 
     def to_dict(self):
         """Converts the object properties to a dictionary."""

@@ -1,10 +1,10 @@
-import logging
 import json
+import logging
 import uuid
-import openai
 
+from evaluableai.data_model.input_row_object import InputRow
 from evaluableai.data_model.model_response_object import ModelResponseObject
-from evaluableai.data_model.input_row import InputRow
+
 
 # Make sure to import InputRow if it's a separate class
 
@@ -30,7 +30,6 @@ class NullModel:
             input_text = data.get('input', '')
             context = data.get('context', '')
             input_row = InputRow(input_text, context)  # Assuming InputRow is imported
-
 
             model_counter = 1
             for response in data.get('responses', []):

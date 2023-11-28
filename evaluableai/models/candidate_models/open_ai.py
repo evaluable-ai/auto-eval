@@ -4,11 +4,12 @@ import uuid
 from openai import OpenAI
 
 from evaluableai.data_model.model_response_object import ModelResponseObject
+from evaluableai.models.candidate_models.candidate_model_names import CandidateModelName
 
 
 class OpenAICandidate:
     def __init__(self, model_version, api_key):
-        self._model_name = 'open_ai'
+        self._model_name = CandidateModelName.OPEN_AI
         self._model_version = model_version
         self._api_key = api_key
         # Set the API key for OpenAI
@@ -52,7 +53,7 @@ class OpenAICandidate:
 
 class OpenAiChatCandidate:
     def __init__(self, model_version, api_key):
-        self._model_name = 'open_ai'
+        self._model_name = CandidateModelName.OPEN_AI_CHAT
         self._model_version = model_version
         self._api_key = api_key
         self._response_list = None

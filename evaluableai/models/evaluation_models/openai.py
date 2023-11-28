@@ -64,9 +64,6 @@ class Openai(Model):
                     "content": self.create_prompt(input_text, context, response)
                 }
             ],
-            'response_format': {
-                "type": "json_object"
-            },
             'temperature': 0,  # Adjust as needed for creativity vs. precision
             # 'max_tokens': 4000,  # Adjust as needed based on expected length of evaluation
         }

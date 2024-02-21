@@ -30,7 +30,9 @@ setup(
         'tzdata==2023.3',
         'urllib3==2.1.0'
     ],
-    # Other metadata
+    author="Prashant Garg",
+    author_email="prashant@evaluable.ai",
+    description="SDK for interacting with EvaluableAI web application",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
 )

@@ -10,7 +10,6 @@ setup(
         'certifi==2023.7.22',
         'charset-normalizer==3.3.2',
         'distro==1.8.0',
-        # 'evaluableai @ file:///Users/pgargr/PycharmProjects/clean/LLM-eval', # Local path, not included
         'h11==0.14.0',
         'httpcore==1.0.2',
         'httpx==0.25.1',
